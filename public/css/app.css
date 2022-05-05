@@ -1,0 +1,5 @@
+.leaving-trains-container {
+  display: grid;
+  grid-auto-flow: column;
+}
+
