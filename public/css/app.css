@@ -1,6 +1,12 @@
 .leaving-trains-container {
   display: grid;
   grid-auto-flow: column;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.train {
+  padding: 1rem;
 }
 
 small {
