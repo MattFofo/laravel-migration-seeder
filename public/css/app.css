@@ -3,3 +3,7 @@
   grid-auto-flow: column;
 }
 
+small {
+  color: lightblue;
+}
+
