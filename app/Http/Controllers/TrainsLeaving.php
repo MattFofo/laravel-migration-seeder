@@ -12,7 +12,33 @@ class TrainsLeaving extends Controller
         $data = [
             'trains' => $trains
         ];
-        //dd($trains);
+        foreach ($data['trains'] as $train) {
+            if ($train['in orario']) {
+                $train->{'in orario'} = 'in orario';
+            } else {
+                $train->{'in orario'} = 'in ritardo';
+            }
+
+            if ($train['cancellato']) {
+                $train->{'cancellato'} = 'cancellato';
+            } else {
+                $train->{'cancellato'} = 'attivo';
+            }
+        }
         return view('trains_leaving', $data);
     }
+
+    // public function checkTrainDelay() {
+    //     $trains = Train::all();
+    //     $data = [
+    //         'trains' => $trains
+    //     ];
+    //     foreach ($data['trains'] as $train) {
+    //         if ($train['in orario']) {
+    //             return 'in orario';
+    //         } else {
+    //             return 'in ritardo';
+    //         }
+    //     }
+    // }
 }
