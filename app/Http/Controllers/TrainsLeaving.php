@@ -8,7 +8,7 @@ use App\Train;
 class TrainsLeaving extends Controller
 {
     public function index() {
-        $trains = Train::paginate(10);
+        $trains = Train::where($trains->data_partenza, date());
         $data = [
             'trains' => $trains
         ];

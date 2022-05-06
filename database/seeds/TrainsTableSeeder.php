@@ -17,8 +17,7 @@ class TrainsTableSeeder extends Seeder
     {
         // $trains = [
         //     [
-        //         //$table->id();
-        //         //$table->timestamps();
+        //
         //         'azienda' => 'Trenitalia',
         //         'stazione_di_partenza'  => 'Verona',
         //         'stazione_di_arrivo'    => 'Padova',
@@ -30,8 +29,7 @@ class TrainsTableSeeder extends Seeder
         //         'cancellato'            =>  false
         //     ],
         //     [
-        //         //$table->id();
-        //         //$table->timestamps();
+        //
         //         'azienda' => 'Trenitalia',
         //         'stazione_di_partenza'  => 'Verona',
         //         'stazione_di_arrivo'    => 'Padova',
@@ -43,8 +41,7 @@ class TrainsTableSeeder extends Seeder
         //         'cancellato'            =>  false
         //     ],
         //     [
-        //         //$table->id();
-        //         //$table->timestamps();
+        //
         //         'azienda' => 'Trenitalia',
         //         'stazione_di_partenza'  => 'Verona',
         //         'stazione_di_arrivo'    => 'Padova',
@@ -59,11 +56,12 @@ class TrainsTableSeeder extends Seeder
 
         for ($i=0; $i < 250; $i++) {
             $train = new Train();
-            $train->azienda = $faker->name;
+            $train->azienda = $faker->word;
             $train->stazione_di_partenza = $faker->city;
             $train->stazione_di_arrivo = $faker->city;
             $train->orario_di_partenza = $faker->time();
             $train->orario_di_arrivo = $faker->time();
+            $train->data_partenza = $faker->date();
             $train->codice_treno = $faker->randomNumber(5, true);
             $train->numero_di_carrozze = $faker->numberBetween(5, 15);
             $train->in_orario = $faker->numberBetween(0, 1);
