@@ -8,7 +8,7 @@ use App\Train;
 class TrainsLeaving extends Controller
 {
     public function index() {
-        $trains = Train::where($trains->data_partenza, date());
+        $trains = Train::where('data_partenza', date("Y-m-d"))->get();
         $data = [
             'trains' => $trains
         ];
