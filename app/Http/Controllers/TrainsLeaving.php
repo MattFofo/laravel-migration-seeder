@@ -12,6 +12,7 @@ class TrainsLeaving extends Controller
         $data = [
             'trains' => $trains
         ];
+        //dd($data);
         foreach ($data['trains'] as $train) {
             if ($train['in orario']) {
                 $train->{'in orario'} = 'in orario';
@@ -27,18 +28,4 @@ class TrainsLeaving extends Controller
         }
         return view('trains_leaving', $data);
     }
-
-    // public function checkTrainDelay() {
-    //     $trains = Train::all();
-    //     $data = [
-    //         'trains' => $trains
-    //     ];
-    //     foreach ($data['trains'] as $train) {
-    //         if ($train['in orario']) {
-    //             return 'in orario';
-    //         } else {
-    //             return 'in ritardo';
-    //         }
-    //     }
-    // }
 }

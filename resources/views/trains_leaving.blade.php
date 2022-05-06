@@ -5,10 +5,13 @@
 @section('content')
     <div class="leaving-trains-container">
         @foreach ($trains as $train)
+        @php
+            dd($train);
+        @endphp
         <div class="train">
             <h2>{{ $train->azienda }}</h2>
-            <h2><small>stazione di partenza:</small> {{ $train->{'stazione di partenza'} }}</h2>
-            <h2><small>stazione di arrivo:</small> {{ $train->{'stazione di arrivo'} }}</h2>
+            <h2><small>stazione di partenza:</small> {{ $train->stazione_di_partenza }}</h2>
+            <h2><small>stazione di arrivo:</small> {{ $train->stazione_di_arrivo }}</h2>
             <h2><small>orario di partenza:</small> {{ $train->{'orario di partenza'} }}</h2>
             <h2><small>orario di arrivo:</small> {{ $train->{'orario di arrivo'} }}</h2>
             <h2><small>codice treno:</small> {{ $train->{'codice treno'} }}</h2>
