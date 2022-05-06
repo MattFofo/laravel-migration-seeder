@@ -22,6 +22,6 @@
         </div>
         @endforeach
     </div>
-
+    {{ $trains->links() }}
 @endsection
 
