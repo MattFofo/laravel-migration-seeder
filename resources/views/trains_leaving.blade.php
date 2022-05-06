@@ -3,11 +3,9 @@
 @section('page_title', 'Treni in partenza')
 
 @section('content')
+<h2>Treni in partenza il: {{ $trains[0]['data_partenza'] }}</h2>
     <div class="leaving-trains-container">
         @foreach ($trains as $train)
-        @php
-            //dd($train);
-        @endphp
         <div class="train">
             <h2>{{ $train->azienda }}</h2>
             <h2><small>stazione di partenza:</small> {{ $train->stazione_di_partenza }}</h2>
